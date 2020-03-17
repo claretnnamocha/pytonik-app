@@ -1,12 +1,8 @@
-from pytonik import serv as server
+from pytonik import serv
 import os
 
 LOCAL_PORT = 6060
-HOST = 'localhost'
 
-PORT = os.environ.get('PORT')
-if PORT == None:
-    PORT = LOCAL_PORT
-    HOST = ''
-
-server.run(host=HOST, port=PORT)
+port = int(os.environ.get("PORT", LOCAL_PORT))
+host = "localhost" if port == LOCAL_PORT else ""
+serv.run(host=host, port=port)
