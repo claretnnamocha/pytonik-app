@@ -1,3 +1,3 @@
 from pytonik import serv
 
-serv.run(host="https://pytonik.herokuapp.com/", path="", port=6060)
+serv.run(host="", path="", port=80)
