@@ -1,3 +1,3 @@
 from pytonik import serv
 
-serv.run(host="", path="", port=80)
+serv.run(host="", path="", port="8080")
