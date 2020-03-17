@@ -1,7 +1,5 @@
 from pytonik import serv
-import socket
+import os
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-port = sock.getsockname()[1]
-print(sock.getsockname())
+port = int(os.environ.get("PORT", 5000))
 serv.run(host="", path="", port=port)
